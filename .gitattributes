@@ -1,6 +1,9 @@
 * text=auto eol=lf
-*.csv text eol=lf
-*.py text eol=lf
 *.md text eol=lf
 *.txt text eol=lf
+*.py text eol=lf
 *.json text eol=lf
+*.csv text eol=lf
+# generator output uses CRLF and its MD5 is part of the brief: never convert
+data/records.csv -text
+generate_data.py -text
