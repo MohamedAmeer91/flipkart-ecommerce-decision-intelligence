@@ -38,7 +38,7 @@ python -m unittest discover tests
 
 ## Part 3 findings
 
-- **R3.1** The WCSS drops are: WCSS(2) - WCSS(3) = 659.8282, WCSS(3) - WCSS(4) = 108.0739, WCSS(4) - WCSS(5) = 171.0575, WCSS(5) - WCSS(6) = 45.5466. `elbow_k` = 3: the drop from 3 to 4 (108.0739) is below half of the drop from 2 to 3. The drops do not shrink steadily (the 4 to 5 drop is larger than the 3 to 4 drop) because the pinned starting rows give one reproducible solution, not necessarily the global optimum. K = 3 is used throughout.
+- **R3.1** WCSS runs 2262.6753 (K = 2), 1602.8471, 1494.7732, 1323.7157, 1278.1691 (K = 6). The WCSS drops are: WCSS(2) - WCSS(3) = 659.8282, WCSS(3) - WCSS(4) = 108.0739, WCSS(4) - WCSS(5) = 171.0575, WCSS(5) - WCSS(6) = 45.5466. `elbow_k` = 3: the drop from 3 to 4 (108.0739) is below half of the drop from 2 to 3. The drops do not shrink steadily (the 4 to 5 drop is larger than the 3 to 4 drop) because the pinned starting rows give one reproducible solution, not necessarily the global optimum. K = 3 is used throughout.
 - **R3.2** Segments (from `part3_segments.csv`):
   - **A, "premium loyal" (322 customers):** tenure 47.5 months, discount share 0.2250, loyalty score 62.1584, outcome rate 0.0186. Action: protect with early access and loyalty perks; no retention coupon.
   - **B, "high-spend, complaint-prone" (255 customers):** 6.0706 complaints, average past order 28.7192 hundreds, mean order value 17.1248 hundreds, outcome rate 0.2353. Action: proactive service recovery and a dedicated complaint follow-up.
