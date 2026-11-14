@@ -1,0 +1,11 @@
+# Decisions
+- Web layer imports `common.py` (no side effects) and reads `outputs/`; segment and hierarchical views use the committed CSVs rather than re-running K-means.
+- Prose (memo, limitations, findings) is read from the root README at runtime so it never drifts from the graded text.
+- The threshold lab uses the test rows by default (as in the brief); the training set is selectable. Cost rule defaults to INR 50 per false alarm and INR 400 per miss and can be changed.
+- KNN is restricted to odd K 1..21 (the brief's grid), so the vote rule is unambiguous.
+- Ensemble reuses the Part 4 stump (best info-gain split) and its 0.3 vote threshold semantics; the tau slider applies to all members.
+- Score form: inputs are raw feature values, standardised with train mean/SD, passed through trained logistic weights. Nearest segment uses centroid distance on X1-X5 against the committed segment means (an indicator, not the K-means assignment).
+- Charts are inline SVG; no vendored JS library is needed.
+- Engine is a lazily built singleton, warmed at startup, so tests work without lifespan.
+- Python package imports: run `uvicorn web.app:app` from the repo root; `web/__init__.py` makes it a package.
+- web/requirements.txt pins numpy as well because the engine needs it.
