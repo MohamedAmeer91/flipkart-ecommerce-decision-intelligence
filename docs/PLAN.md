@@ -149,7 +149,7 @@ Order follows data dependency (Part 2 helper reused by Part 4; Part 3 reuses dat
 ### M4. Deploy
 - P1. Confirm default branch is `main`; final commit on `main`; working tree clean.
 - P2. User creates the public GitHub repo and pushes (not done by this plan; no remotes added here). Verify on the GitHub page that `main` is default and files are present.
-- P3. Submit the link (`https://github.com/<user>/<repo>` or `/tree/main`) on the course platform before the closing time.
+- P3. Submit the link (`github.com/<user>/<repo>` or `/tree/main`) on the course platform before the closing time.
 - Exit: repo link opens publicly and resolves to `main`; all required files visible; submission confirmed.
 
 ## 7. Proposed tech stack
